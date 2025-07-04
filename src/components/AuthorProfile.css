@@ -1,0 +1,396 @@
+/* AuthorProfile.css */
+.author-profile {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-left .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.nav-center {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+  color: #2c3e50;
+}
+
+.contact-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Main Profile Container */
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 40px;
+  padding: 60px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Left Column - Photo */
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  width: 300px;
+  height: 400px;
+  background-color: #e74c3c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+/* Placeholder image with initials */
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.initials {
+  font-size: 4rem;
+  font-weight: 300;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Removed the ::before overlay so the actual image shows */
+
+.view-all-container {
+  width: 100%;
+  text-align: center;
+}
+
+.view-all-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Center Column - Bio */
+.profile-center {
+  padding: 20px;
+}
+
+.author-name {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.author-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7f8c8d;
+  letter-spacing: 2px;
+  margin: 0 0 40px 0;
+}
+
+.bio-text {
+  margin-bottom: 40px;
+}
+
+.bio-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-link {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #2980b9;
+}
+
+.separator {
+  color: #bdc3c7;
+}
+
+/* Right Column - Timeline */
+.profile-right {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.timeline-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.date {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #7f8c8d;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  font-weight: 500;
+  min-width: 50px;
+}
+
+.content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.content p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  line-height: 1.5;
+  margin: 0 0 8px 0;
+}
+
+.book-link {
+  font-size: 0.9rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.book-link:hover {
+  color: #2980b9;
+}
+
+/* Book Action Buttons */
+.book-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.purchase-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  min-width: 80px;
+}
+
+.purchase-btn.primary {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.purchase-btn.primary:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+
+.purchase-btn.secondary {
+  background-color: transparent;
+  color: #7f8c8d;
+  border: 1px solid #bdc3c7;
+}
+
+.purchase-btn.secondary:hover {
+  background-color: #f8f9fa;
+  border-color: #95a5a6;
+  color: #2c3e50;
+}
+
+/* Navigation Arrows */
+.navigation-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.nav-arrow {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+  background-color: #c0392b;
+}
+
+.nav-arrow.prev span {
+  order: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .profile-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+  
+  .profile-left {
+    order: 1;
+  }
+  
+  .profile-center {
+    order: 2;
+  }
+  
+  .profile-right {
+    order: 3;
+  }
+  
+  .navigation {
+    padding: 20px;
+  }
+  
+  .nav-center {
+    gap: 20px;
+  }
+  
+  .author-name {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-center {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .image-container {
+    width: 250px;
+    height: 300px;
+  }
+  
+  .author-name {
+    font-size: 2rem;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .time {
+    min-width: auto;
+  }
+} 
